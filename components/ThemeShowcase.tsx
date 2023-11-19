@@ -63,7 +63,6 @@ const AccordionDemo = () => (
   <Accordion.Root
     className="bg-bg-color-1 rounded-md shadow-[0_2px_10px] shadow-black/5"
     type="single"
-    defaultValue="item-1"
     collapsible
   >
     <AccordionItem value="item-1">
