@@ -28,6 +28,7 @@ export default function ThemeShowcase({
               const theme = e.target!.value;
               setSelectedTheme(theme);
             }}
+            value={selectedTheme}
             className="bg-bg-color-2 text-t-color-2"
           >
             <option value="light">Light</option>
@@ -38,8 +39,13 @@ export default function ThemeShowcase({
         <div className="bg-ic-color-3 p-4 rounded-md border border-bs-color-3">
           <p className="text-t-color-2 ">A themed paragraph</p>
         </div>
-        <div className="p-4 w-full flex justify-center">
+        <div className="p-4 w-full flex justify-center gap-2 ">
           <AccordionDemo />
+          <div className="shadow-md h-fit rounded-md">
+            <button className="focusable h-fit text-t-color-2 border border-bs-color-3 bg-ic-color-2 p-2 rounded-md">
+              This is a custom button with focus styles and shadow
+            </button>
+          </div>
         </div>
       </section>
     </CustomThemeProvider>

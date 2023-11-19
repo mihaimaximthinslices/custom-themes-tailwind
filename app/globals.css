@@ -64,6 +64,21 @@
         --t-color-1: var(--dark-green-11);
         --t-color-2: var(--dark-green-12);
     }
+    .focusable {
+        outline: none;
+    }
+
+    .focusable:focus {
+        ring-width: 2px;
+        ring-color: var(--t-color-2);
+        box-shadow: 0 0 0 2px var(--t-color-2);
+    }
+
+    .focusable:focus-within {
+        shadow: 0 0 0 2px var(--t-color-2);
+        position: relative;
+        z-index: 10;
+    }
 }
 
 @layer tw_components_utils {
