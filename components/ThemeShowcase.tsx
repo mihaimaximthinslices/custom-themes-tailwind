@@ -19,7 +19,7 @@ export default function ThemeShowcase({
   return (
     <CustomThemeProvider themeClass={selectedTheme}>
       <section className="p-6 bg-bg-color-2 flex flex-col gap-4 rounded-md">
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-col md:flex-row">
           <h1 className="text-t-color-2">
             You can have multiple themes for different components
           </h1>
@@ -39,7 +39,7 @@ export default function ThemeShowcase({
         <div className="bg-ic-color-3 p-4 rounded-md border border-bs-color-3">
           <p className="text-t-color-2 ">A themed paragraph</p>
         </div>
-        <div className="p-4 w-full flex justify-center gap-2 ">
+        <div className="p-4 w-full flex justify-center gap-6 flex-col">
           <AccordionDemo />
           <div className="shadow-md h-fit rounded-md">
             <button className="focusable h-fit text-t-color-2 border border-bs-color-3 bg-ic-color-2 p-2 rounded-md">
@@ -54,7 +54,7 @@ export default function ThemeShowcase({
 
 const AccordionDemo = () => (
   <Accordion.Root
-    className="bg-bg-color-1 w-[300px] rounded-md shadow-[0_2px_10px] shadow-black/5"
+    className="bg-bg-color-1 rounded-md shadow-[0_2px_10px] shadow-black/5"
     type="single"
     defaultValue="item-1"
     collapsible
