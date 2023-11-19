@@ -1,13 +1,9 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
 
 export default function ThemeSwitcher(): JSX.Element {
   const { setTheme, theme } = useTheme();
 
-  useEffect(() => {
-    console.log(theme);
-  }, []);
   return (
     <section className="flex gap-1 items-center flex-col md:flex-row">
       <h1 className="p-2 text-t-color-1">Hello there 👋, your main theme is</h1>

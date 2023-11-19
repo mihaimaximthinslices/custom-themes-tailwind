@@ -1,6 +1,13 @@
 "use client";
 import CustomThemeProvider from "@/hooks/CustomThemeProvider";
-import { forwardRef, useEffect, useState } from "react";
+import {
+  forwardRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+  useEffect,
+  useState,
+} from "react";
 import { useTheme } from "next-themes";
 
 import * as Accordion from "@radix-ui/react-accordion";
@@ -69,8 +76,7 @@ const AccordionDemo = () => (
     <AccordionItem value="item-2">
       <AccordionTrigger>Is it unstyled?</AccordionTrigger>
       <AccordionContent>
-        Yes. It's unstyled by default, giving you freedom over the look and
-        feel.
+        Yes. Its unstyled by default, giving you freedom over the look and feel.
       </AccordionContent>
     </AccordionItem>
 
@@ -83,7 +89,13 @@ const AccordionDemo = () => (
   </Accordion.Root>
 );
 
-const AccordionItem = forwardRef(
+const AccordionItem: ForwardRefExoticComponent<
+  {
+    children: ReactNode;
+    className?: string | undefined;
+    value: string;
+  } & RefAttributes<HTMLDivElement>
+> = forwardRef(
   (
     {
       children,
@@ -109,7 +121,12 @@ const AccordionItem = forwardRef(
   ),
 );
 
-const AccordionTrigger = forwardRef(
+const AccordionTrigger: ForwardRefExoticComponent<
+  {
+    children: ReactNode;
+    className?: string | undefined;
+  } & RefAttributes<HTMLButtonElement>
+> = forwardRef(
   (
     {
       children,
@@ -164,3 +181,7 @@ const AccordionContent = forwardRef(
     </Accordion.Content>
   ),
 );
+
+AccordionTrigger.displayName = "AccordionTrigger";
+AccordionItem.displayName = "AccordionItem";
+AccordionContent.displayName = "AccordionContent";
