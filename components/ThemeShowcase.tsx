@@ -41,7 +41,7 @@ export default function ThemeShowcase({
         </div>
         <div className="p-4 w-full flex justify-center gap-6 flex-col">
           <AccordionDemo />
-          <div className="shadow-md h-fit rounded-md">
+          <div className="shadow-md h-fit w-fit rounded-md">
             <button className="focusable h-fit text-t-color-2 border border-bs-color-3 bg-ic-color-2 p-2 rounded-md">
               This is a custom button with focus styles and shadow
             </button>
